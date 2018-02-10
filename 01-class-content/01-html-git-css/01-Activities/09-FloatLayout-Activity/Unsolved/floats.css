@@ -18,25 +18,65 @@ header {
 }
 
 section {
+  background-color: #eee;
+  line-height: 50px;
+  padding: 20px;
 }
 
 #left {
+  float: left;
+  background-color: #666;
+  color: white;
+  display: inline-block;
+  width: 33%;
+  line-height: 50px;
+  margin-bottom: 20px;
 }
 
 #middle {
+  float: left;
+  width: 33%;
+  display: inline-block;
+  background-color: #888;
+  color: white;
+  line-height: 50px;
+  margin-bottom: 20px;
 }
 
 #right {
+  float: left;
+  width: 33%;
+  display: inline-block;
+  background-color: #666;
+  color: white;
+  line-height: 50px;
+  margin-bottom: 20px;
 }
 
 #full {
+  width: 100%;
+  overflow: auto;
+  clear: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #division {
+  background-color: #6ea3da;
+  line-height: 50px;
 }
 
 aside {
+  background-color: #fff;
+  height: 250px;
+  width: 300px;
+  float: left;
+  margin: 30px;
 }
 
 footer {
+  display: inline-block;
+  background-color: #ccc;
+  line-height: 50px;
+  width: 100%;
 }
