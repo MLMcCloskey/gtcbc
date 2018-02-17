@@ -3,3 +3,18 @@
  **/
 
 /* Add in the Google Fonts of your choice */
+.thought1 {
+    font-family: 'Kavivanar', cursive;
+}
+
+.thought2 {
+    font-family: 'Indie Flower', cursive;
+}
+
+.thought3 {
+    font-family: 'Anton', sans-serif;
+}
+
+.fab-fa-aviato {
+    size: 5x;
+}

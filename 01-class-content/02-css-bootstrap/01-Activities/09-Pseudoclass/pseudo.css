@@ -1,0 +1,25 @@
+a {
+    text-decoration: none;
+}
+
+a:default {
+    color: green;
+}
+
+a:hover {
+    color: gold;
+    transform: rotate(180deg);
+}
+
+a:focus {
+    background-color: red;
+}
+
+a:active {
+    /* transform: rotate(180deg) */
+    background-color: purple;
+}
+
+a:visited {
+    text-decoration: none;
+}
