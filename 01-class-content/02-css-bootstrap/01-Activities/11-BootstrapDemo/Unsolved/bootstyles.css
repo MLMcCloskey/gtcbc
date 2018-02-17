@@ -1,0 +1,10 @@
+.jumbotron {
+    background-color: pink;
+    width: 40%;
+}
+
+.form-group {
+    width: 40%;
+    background-color: lightblue;
+    /* float: right; */
+}
