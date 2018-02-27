@@ -11,7 +11,15 @@
 
   <div id="game">
 
+
   </div>
+  <p id="userGuess"></p>
+  <p id="computerGuess"></p>
+  <p id="wins"></p>
+  <p id="ties"></p>
+  <p id="losses"></p>
+
+
 
   <script type="text/javascript">
 
@@ -32,8 +40,22 @@
 
       // Alerts the Computer's guess.
       alert("Computer guess: " + computerGuess);
+  
 
-    };
+    var wins=0;
+    var ties=0;
+    var losses=0;
+
+     document.getElementById("userGuess").innerHTML = ("You guessed: " + userGuess)
+     document.getElementById("computerGuess").innerHTML = ("The computer guessed: " + computerGuess)
+     document.getElementById("wins").innerHTML = ("Wins: "+wins)
+     document.getElementById("ties").innerHTML = ("Ties: "+ties)
+     document.getElementById("losses").innerHTML = ("Losses: "+losses)
+
+  };
+
+    if  (userGuess === computerGuess){ties++;}
+
   </script>
 
 </body>

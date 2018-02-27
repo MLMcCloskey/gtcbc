@@ -40,22 +40,32 @@
       // ================================================================================
 
       // Add in the lines of code below necessary to call the functions we created above.
-
+      
 
       // Call the adder function here.
 
+      function adder(x,y,z) {
+        console.log(x + y + z);
+      }
 
-      console.log("-------------------");
+      adder (3,4,5);
 
 
       // Call the multiplier function here.
+      function multiplier(x, y, z) {
+        var multiplierReturn = x*y*z;
+        console.log(multiplierReturn);
+        return multiplierReturn;
+      }
 
-
-      console.log("-------------------");
+      console.log(multiplier(3,4,5));
 
 
       // Call the isString function here.
-
+      function isString(x, y, z) {
+        if (typeof x==="string" && typeof y==="string" && typeof z==="string") {return true}
+        console.log(isString)
+      }
 
       console.log("-------------------");
 

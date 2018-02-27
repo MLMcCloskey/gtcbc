@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>My First Object</title>
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
 
     <script>
-
-      var car = {
+    
+    var car = {
         make: "Honda",
         model: "Fit",
         color: "Blue Raspberry",
@@ -47,27 +51,16 @@
       };
 
 
-      // How would we log...
-
-      // The car's make?
-      console.log(car.make)
-
-      // The car's model?
-      console.log(car.model)
-
-      // The car's mileage?
-      console.log(car.mileage)
-
-      // How would we run the car's driveToWork method?
-      car.driveToWork()
-
-      // How would we run the car's driveAroundWorld method?
-      car.driveAroundWorld()
-
-      // How would we run the getTuneUp method?
-      car.getTuneUp()
+      document.onkeyup = function(event){
+        var userText= event.key;
+        
+        if (userText==="h") {car.honk()}
+        else if (userText==="d"){car.driveToWork()}
+        else if (userText==="w"){car.driveAroundWorld()}
+        else if (userText==="t"){car.getTuneUp()}
+    }
 
     </script>
-    
-  </body>
+
+</body>
 </html>

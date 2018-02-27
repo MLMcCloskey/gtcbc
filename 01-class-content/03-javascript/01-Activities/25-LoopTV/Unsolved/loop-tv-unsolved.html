@@ -8,24 +8,26 @@
 
     <script type="text/javascript">
 
-      // ????
+      // this is just defining variables
+      // "init favTVshows to empty array"
       var favTVshows = [];
       var tvShow;
 
-      // For Loop Elements Repeats ??? Times
+      // For Loop Elements Repeats 3 Times
       for (var i = 1; i < 4; i++) {
 
-        // ????
+        // this says your prompt plus that string plus the number of the iteration plus the next string. plus meaning to concatonate here
         tvShow = prompt("What's your #" + i + " favorite TV show?");
 
-        // ????
+        // I think this records your answers from favTVshows to equal the variable for tvShow
+        // "this actually is pushing the values given from the prompts into the array"
         favTVshows.push(tvShow);
       }
 
-      // ????
+      // another for loop for a different iteration
       for (var j = 0; j < favTVshows.length; j++) {
 
-        // ???
+        // this will display our favorite tvshows
         alert(favTVshows[j]);
       }
 
