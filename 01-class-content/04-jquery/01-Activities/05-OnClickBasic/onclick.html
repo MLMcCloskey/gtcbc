@@ -10,6 +10,13 @@
 </head>
 <body>
 
+  <style>
+    .fancy {
+      font-size: 100px;
+      color: green;
+    }
+  </style>
+
   <!-- Header with an id of click-me -->
   <h3 id="click-me">CLICK ME!</h3>
 
@@ -25,6 +32,7 @@
       // And so whenever it is clicked...
       $("body").on("click", "#click-me", function () {
         alert("I've been clicked!");
+        // $("#clickme").attr("class" "fancy")
       });
 
     });

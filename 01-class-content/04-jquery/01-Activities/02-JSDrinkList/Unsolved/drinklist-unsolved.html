@@ -30,6 +30,7 @@
     // 1. Create code that "grabs" the div with the matching id (#drink-options);
     // ...
 
+    var drink = document.getElementById(drinkList)
 
     // ...
 
@@ -38,6 +39,11 @@
     // HINT: You will need to use each of the following methods: createElement, textContent, appendChild
     // ...
 
+    for (var i =0; i<drinkList.length; i++) {
+      var newDrinkP = document.createElement("p");
+      newDrinkP.textcontent = drinkList[i];
+      drinkDiv.appendChild(newDrinkP);
+    } 
 
     // ...
 
