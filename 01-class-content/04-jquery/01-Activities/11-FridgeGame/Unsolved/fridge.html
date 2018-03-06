@@ -47,12 +47,14 @@
     border-style: solid;
     width: 100px;
   }
+
 </style>
 
 <body>
   <div id="display"></div>
   <div id="buttons"></div>
   <button id="clear">clear</button>
+
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
@@ -65,7 +67,14 @@
 
       // MAJOR TASK #1: DYNAMICALLY CREATE BUTTONS
       // =================================================================================
-
+      for (i=0; i<letters.length; i++){
+        var letterBtn = $("<button>");
+        $(letterBtn).addClass("letter-btn letter letter-button-color");
+        $(letterBtn).attr("data-letter" , letters[i]);
+        $(letterBtn).text(letters[i]);
+        $("#buttons").append(letterBtn);
+      };
+    
       // 1. Create a for-loop to iterate through the letters array.
 
       // Inside the loop...
@@ -84,7 +93,13 @@
 
       // MAJOR TASK #2: ATTACH ON-CLICK EVENTS TO "LETTER" BUTTONS
       // =================================================================================
-
+        $("body").on("click" , ".letter-btn", function(){
+          console.log($(this));
+          var fridgeMagnet = $("<div>");
+          fridgeMagnet.addClass("letter fridge-color");
+          fridgeMagnet.text($(this).attr("data-letter"));
+          $("#display").append(fridgeMagnet);
+        });
       // 7. Create an "on-click" event attached to the ".letter-button" class.
 
       // Inside the on-click event...

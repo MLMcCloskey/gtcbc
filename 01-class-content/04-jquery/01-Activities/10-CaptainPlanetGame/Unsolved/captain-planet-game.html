@@ -63,6 +63,19 @@
           </div>
         </div>
 
+        <!-- Controls (Superpower rotate) -->
+        <div id="rotationControls" class="card">
+          <h4 class="card-header">Superpowers - Getting Dizzy!</h4>
+          <div class="card-body">
+            <div class="text-center">
+              <button class="btn btn-dark btn-lg normal-button">
+                <span class="glyphicon glyphicon-eye-open"></span> Normal</button>
+              <button class="btn btn-info btn-lg rotate-button">
+                <span class="glyphicon glyphicon-eye-close"></span> Up-Side-Down</button>
+            </div>
+          </div>
+        </div>
+
         <!-- Controls (Superpower Move Controls) -->
         <div id="moveControls" class="card">
           <h4 class="card-header">Move Controls</h4>
@@ -146,6 +159,28 @@
     }).on('click', '.back-button', function () {
       captainPlanet.animate({ top: '50px', left: '80px' }, 'fast');
     });
+
+    // Rotation
+    $('#rotationControls').on('click', '.rotate-button', function () {
+     captainPlanet.css({
+       "transform": "rotate(180deg)",
+      "-webkit-transform": "rotate(180deg)",
+        "-moz-transform": "rotate(180deg)",
+        "transform": "rotate(180deg)"
+     });
+    });
+    $('#rotationControls').on('click', '.normal-button', function () {
+     captainPlanet.css({
+       "transform": "rotate(0deg)",
+      "-webkit-transform": "rotate(0deg)",
+        "-moz-transform": "rotate(0deg)",
+        "transform": "rotate(0deg)"
+     });
+    });
+    
+    
+
+
 
     // Keyboard move controls
     $(document).keyup(function (e) {

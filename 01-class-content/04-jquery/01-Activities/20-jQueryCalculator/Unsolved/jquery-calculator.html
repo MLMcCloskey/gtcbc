@@ -76,9 +76,52 @@
 $(document).ready(function(){
 
 // Your code here...
+// var x = value;
+var operation = false;
+var firstNumber="";
+var secondNumber="";
+var operator="";
+// var operator= ;
 
 
-});
+
+  $("body").on("click", ".number", function(){
+    if (operation === false){
+    $("#first-number").append($(this).val());
+    }
+    firstNumber = parseInt($("#first-number").text()); 
+
+    if (operation === true){
+      $("#second-number").append($(this).val());
+    secondNumber = parseInt($("#second-number").text());
+    }
+  })
+
+
+  $("body").on("click", ".operator", function(){
+    $("#operator").append($(this).text());
+    operation = true;
+    operator = $("#operator").text();
+    });
+
+    
+
+  $("body").on("click", ".equal", function(){
+    if (operator == '+') {
+    $("#result").append(Math.abs(firstNumber + secondNumber));
+  }
+    if (operator == '-'){
+      $("#result").append(Math.abs(firstNumber - secondNumber));
+    }
+    if (operator === 'times'){
+      $("#result").append(Math.abs(firstNumber * secondNumber));
+    }
+    if (operator === '&divide;'){
+      $("#result").append(Math.abs(firstNumber / secondNumber));
+    }
+  })
+
+})
 
 </script>
 

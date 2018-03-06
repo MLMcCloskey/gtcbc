@@ -13,14 +13,15 @@
     // EXAMPLE ONE:
     // --------------------------------------------------
     // What is "this" going to print?
+    //Information about the window... tho im still not really sure what that "window" is..
 
     console.log(this);
 
-
+    
     // EXAMPLE TWO:
     // --------------------------------------------------
     // What is "this" going to print?
-
+    //It should print something about how the function works... tho there is nothing written in the function..
     function myFunction() {
       console.log(this);
     }
@@ -29,6 +30,7 @@
     // EXAMPLE THREE (IMPORTANT):
     // --------------------------------------------------
     // What is "someObj.say()" going to print?
+    //it should say "Red Hat"
 
     var someObj = {
       name: "Red Hat",
@@ -42,6 +44,7 @@
     // EXAMPLE FOUR (BONUS, TRICKY!):
     // --------------------------------------------------
     // What is "myObj.yell()" going to print? Why?
+    //Blue Shell? Within the yell function the name is designated as star powerup but then name is changed to newName which is designated as Blue Shell 
 
     var myObj = {
       name: "",
