@@ -4,7 +4,7 @@
 
 #### Homework #3 - Let's Build Hangman
 
-Live coded walkthrough (from scratch!) of the hangman game using HTML, Bootstrap CSS, and JavaScript. [Watch the Video!]()
+Live coded walkthrough (from scratch!) of the hangman game using HTML, Bootstrap CSS, and JavaScript. [Watch the Video!](https://youtu.be/cgdmOR15cn4)
 
 - - -
 
