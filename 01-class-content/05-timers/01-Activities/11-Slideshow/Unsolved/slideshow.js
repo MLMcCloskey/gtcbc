@@ -2,8 +2,8 @@
 // Students: follow the instructions below:
 
 // TODO: Put links to our images in this image array.
-var images = [];
-
+// var images = [['bootstrap.png', 'bootstrap'],['github', 'github-logo.jpg'], ['loading', 'loading.gif'], ['js', 'logo_JavaScript.png']];
+var images = ["images/bootstrap.png", "images/github-log.jpg", "images/loading.gif", "images/logo_JavaScript.png"]
 // Variable showImage will hold the setInterval when we start the slideshow
 var showImage;
 
@@ -11,9 +11,9 @@ var showImage;
 var count = 0;
 
 // TODO: Use jQuery to run "startSlideshow" when we click the "start" button.
-
+$("#start").on("click", startSlideshow());
 // TODO: Use jQuery to run "stopSlideshow" when we click the "stop" button.
-
+$("#stop").on("click", stopSlideshow());
 
 // This function will replace display whatever image it's given
 // in the 'src' attribute of the img tag.
@@ -24,10 +24,10 @@ function displayImage() {
 function nextImage() {
 
   // TODO: Increment the count by 1.
-
+  count++;
 
   // TODO: Show the loading gif in the "image-holder" div.
-
+  $("#image-holder").html("<img src='images/loading.gif' width=200px");
 
   // TODO: Use a setTimeout to run displayImage after 1 second.
 

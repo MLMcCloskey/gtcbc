@@ -22,6 +22,12 @@ var stopwatch = {
   time: 0,
   lap: 1,
 
+
+  increment: function(){
+    t++;
+  },
+
+
   reset: function() {
 
     stopwatch.time = 0;
@@ -35,7 +41,9 @@ var stopwatch = {
 
       //  TODO: Use setInterval to start the count here and set the clock to running.
       if (!clockRunning) {
-
+        clockRunning = true;
+        clearInterval(intervalId);
+        intervalId = setInterval(t, 1000);
       }
 
   },
