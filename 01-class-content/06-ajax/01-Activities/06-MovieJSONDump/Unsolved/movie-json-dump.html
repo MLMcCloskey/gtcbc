@@ -42,9 +42,16 @@
         // and display it in the div with an id of movie-view
 
         // YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE
-
+        console.log(queryURL);
         // =================================================================
 
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function(response) {
+          console.log(response);
+          $("#movie-view").append(JSON.stringify(response));
+        });
         // CODE GOES HERE
 
         // =================================================================

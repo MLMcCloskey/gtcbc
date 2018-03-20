@@ -15,16 +15,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     // This is our API key. Add your own API key between the ""
-    var APIKey = "";
+    var APIKey = "&APPID=779e9d519bcc66f1442ee9606f718628";
 
     // Here we are building the URL we need to query the database
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=Bujumbura,Burundi&appid=" + APIKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=Bujumbura,Burundi" + APIKey;
 
     // We then created an AJAX call
     $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function(response) {
+      console.log(queryURL);
+      console.log(response);
+      $(".city").append(response.name);
+      $(".wind").append(response.wind.speed);
+      $(".humidity").append(response.main.humidity);
+      $(".temp").append((response.main.temp-273)*1.8 + 32);
 
       // Create CODE HERE to Log the queryURL
       // Create CODE HERE to log the resulting object

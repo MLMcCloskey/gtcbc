@@ -37,9 +37,18 @@
 
       // Function for dumping the JSON content for each button into the div
       function displayMovieInfo() {
-
+        var movie = this.name;
+        var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
         // YOUR CODE GOES HERE!!! HINT: You will need to create a new div to hold the JSON.
-
+        console.log(movie);
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function(response) {
+          console.log(response);
+          $(".container").prepend('<img src= "'+ response.Poster +  '"> </img>');
+          $(".container").append(response.Plot);
+        });
       }
 
       // Function for displaying movie data
@@ -58,7 +67,7 @@
           // Adding a class of movie to our button
           a.addClass("movie");
           // Adding a data-attribute
-          a.attr("data-name", movies[i]);
+          a.attr("name", movies[i]);
           // Providing the initial button text
           a.text(movies[i]);
           // Adding the button to the buttons-view div

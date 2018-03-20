@@ -37,7 +37,7 @@
 
       // Generic function for capturing the movie name from the data-attribute
       function alertMovieName() {
-
+        alert(this.name);
         // YOUR CODE GOES HERE!!!
 
       }
@@ -58,7 +58,7 @@
           // Adding a class
           a.addClass("movie");
           // Added a data-attribute
-          a.attr("data-name", movies[i]);
+          a.attr("name", movies[i]);
           // Provided the initial button text
           a.text(movies[i]);
           // Added the button to the HTML

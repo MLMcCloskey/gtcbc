@@ -19,3 +19,5 @@
   * **BONUS:** Figure out how to convert the Kelvin temperature provided into Fahrenheit.
 
   * **NOTE:** Don't worry if this feels hard. Push yourself!
+
+  http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=779e9d519bcc66f1442ee9606f718628
