@@ -36,7 +36,7 @@ You must give a full effort on every group and individual project.
 
 #### Class Videos
 
-All videos can be found using this [insert link here]
+All videos can be found using this [Panopto link](https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID="58f0986d-28cd-44f4-a8a4-a87f017e4965"&folderSets=3)
 
 -----------------------------------------
 
