@@ -11,28 +11,40 @@ var app = express();
 // Routes
 // What routes do you need to have? Which ones are optional?
 // TODO Add your routes here
-app.get("", function(req, res) {
+// app.get("/", function(req, res) {
+//   res.sendFile(path.join(__dirname, "index.html"));
+// });
 
   // TODO parse out the variables from the request
   // Parameters are received from the URL
   // TODO make sure they're converted to integers (and not strings)
   // Parameters are converted to integers
+// app.get("/api/calculator", function(req, res){
+//   return res.json(calculator);
+// });
+
+app.get("/:operation/:integer1/:integer2", function(req, res){
+  var operation = req.params.operation;
+  var integer1 = parseInt(req.params.integer1);
+  var integer2 = parseInt(req.params.integer2);
+
+  console.log(res);
 
   // Initialize the result variable to send later
   var result;
   // Switch statement chooses operation based on the operation parameter.
   switch (operation) {
   // BONUS - How could you use * + etc. inside the app.get()?
-  case "add":
+  case "add": result = integer1 + integer2;
     // Add your logic here. Pun intended.
     break;
-  case "subtract":
+  case "subtract":result = integer1 - integer2;
     // Subtract logic
     break;
-  case "multiply":
+  case "multiply":result = integer1 * integer2;
     // Multiply
     break;
-  case "divide":
+  case "divide":result = integer1 / integer2;
     // Divide
     break;
   default:

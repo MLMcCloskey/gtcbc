@@ -1,0 +1,19 @@
+<h1>I NEED TO WATCH</h1>
+{{#each movies}}
+<h2>{{this.movie}}</h2>
+<button class="delete" data-id={{this.id}}>Delete</button>
+<hr>
+{{/each}}
+
+<h1>Then I should also watch...</h1>
+<form action="/" method="POST">
+    <textarea type="text" name="movie"></textarea>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    $(".delete").on("click", function(){
+        app.delete("/")
+        connection.query()
+    });
+</script>

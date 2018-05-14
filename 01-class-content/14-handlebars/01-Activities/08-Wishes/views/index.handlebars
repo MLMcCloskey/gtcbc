@@ -1,0 +1,11 @@
+{{#each wishes}}
+<h1>I WISH</h1>
+<h2>{{this.wish}}</h2>
+<hr>
+{{/each}}
+
+<h1>I also wish that...</h1>
+<form action="/" method="POST">
+    <textarea type="text" name="task"></textarea>
+    <button type="submit">Submit</button>
+</form>

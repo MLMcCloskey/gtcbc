@@ -10,8 +10,8 @@ var connection = mysql.createConnection({
   user: "root",
 
   // Your password
-  password: "",
-  database: "greatBay_DB"
+  password: "mlm123",
+  database: "gb_db"
 });
 
 // connect to the mysql server and sql database

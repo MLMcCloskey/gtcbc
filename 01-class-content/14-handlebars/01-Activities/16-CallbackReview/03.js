@@ -12,3 +12,5 @@ var addCallBacks = function(functionOne, functionTwo) {
 
 // What does this return?
 addCallBacks(subtract, multiply);
+
+// same logic as the previous example. 4 + 18 = 22

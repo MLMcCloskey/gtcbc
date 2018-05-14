@@ -16,3 +16,6 @@
   * A query which searches for a specific song in the top 5000 and returns the data for it
 
 * HINT: There are some MySQL queries which could make some of these tasks even easier to accomplish. Feel free to look at MySQL's documentation to find some of them.
+
+
+<!-- id, artist, song name, year, raw popularity score, us score, uk score, euro score, world score -->

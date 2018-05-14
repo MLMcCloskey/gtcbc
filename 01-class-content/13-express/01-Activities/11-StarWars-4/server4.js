@@ -42,7 +42,7 @@ app.get("/api/characters", function(req, res) {
 app.get("/api/characters/:character", function(req, res) {
   // Grab the selected parameter
   var chosen = req.params.character;
-  console.log(chosen);
+  console.log(req.params);
 
   // Filter to show only the selected character
   for (var i = 0; i < characters.length; i++) {

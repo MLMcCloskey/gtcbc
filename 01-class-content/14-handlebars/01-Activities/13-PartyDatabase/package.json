@@ -1,0 +1,19 @@
+{
+  "name": "13-PartyDatabase",
+  "version": "1.0.0",
+  "description": "* You will be creating a holiday party planner application. We want to help create parties for our clients whilst also keeping track of all the events that we are hosting. In MySQL, create a database called `party_db` with two tables structured like the tables below. Utilize the provided `schema.sql` and `seeds.sql` file in order to build the tables and seed initial values.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0",
+    "orm": "^4.0.2",
+    "path": "^0.12.7"
+  }
+}

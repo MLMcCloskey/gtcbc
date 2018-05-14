@@ -1,11 +1,19 @@
 // Initialize Firebase
 // Make sure to match the configuration to the script version number in the HTML
 // (Ex. 3.0 != 3.7.0)
-
+var config = {
+  apiKey: "AIzaSyBdxRYYa-9CGcGVocRUm36h-z1P3ZlEG_4",
+  authDomain: "recentuser-79796.firebaseapp.com",
+  databaseURL: "https://recentuser-79796.firebaseio.com",
+  projectId: "recentuser-79796",
+  storageBucket: "recentuser-79796.appspot.com",
+  messagingSenderId: "744822297813"
+};
+firebase.initializeApp(config);
 
 // Assign the reference to the database to a variable named 'database'
 // var database = ...
-
+var database = firebase.database();
 
 // Initial Values
 var initialBid = 0;
@@ -25,13 +33,17 @@ database.ref().on("value", function(snapshot) {
     // Set the variables for highBidder/highPrice equal to the stored values in firebase.
     // highPrice = ...
     // highBidder = ...
-
+    database.ref().set({
+      highPrice: snapshot.val().highPrice,
+      highBidder: snapshot.val().highBidder
+  })
 
     // Change the HTML to reflect the stored values
-
+    $("#highest-bidder").text(snapshot.val().highBidder);
+    $("#highest-price").text(snapshot.val().highPrice);
 
     // Print the data to the console.
-
+    console.log(highPrice, snapshot.val().highPrice, highBidder, snapshot.val().highBidder);
 
   }
 
@@ -60,16 +72,20 @@ $("#submit-bid").on("click", function(event) {
   event.preventDefault();
 
   // Get the input values
-
+  highPrice = $("#bidder-price").val();
+  highBidder = $("#bidder-name").val();
 
   // Log the Bidder and Price (Even if not the highest)
-  if (bidderPrice > highPrice) {
+  // if (bidderPrice > highPrice) {
 
     // Alert
-    alert("You are now the highest bidder.");
+    // alert("You are now the highest bidder.");
 
     // Save the new price in Firebase
-
+    database.ref().set({
+      highPrice: highPrice,
+      highBidder: highBidder
+  })
 
     // Log the new High Price
 
@@ -79,11 +95,11 @@ $("#submit-bid").on("click", function(event) {
 
     // Change the HTML to reflect the new high price and bidder
 
-  }
+  // }
 
-  else {
-    // Alert
-    alert("Sorry that bid is too low. Try again.");
-  }
+  // else {
+  //   Alert
+  //   alert("Sorry that bid is too low. Try again.");
+  // }
 
 });

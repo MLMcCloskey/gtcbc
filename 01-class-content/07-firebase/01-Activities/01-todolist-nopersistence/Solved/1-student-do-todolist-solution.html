@@ -39,6 +39,7 @@
 
     // Create an initial toDoCount variable
     var toDoCount = 0;
+    var doList = [];
 
     //  On Click event associated with the add-to-do function
     $("#add-to-do").on("click", function(event) {
@@ -72,11 +73,30 @@
       // Add the button and to do item to the to-dos div
       $("#to-dos").append(toDoItem);
 
+
+
+      // attempting to write to local storage....
+      
+      //**********************************************
+      localStorage.clear();
+
+
+      doList.push(toDoTask);
+
+      localStorage.setItem("doList", doList);
+      //******************************************
+
+
+
       // Clear the textbox when done
       $("#to-do").val("");
 
       // Add to the toDoCount
       toDoCount++;
+
+
+
+
     });
 
     // When a user clicks a check box then delete the specific content

@@ -36,21 +36,40 @@ var animals = [
 
 app.get("/dog", function(req, res) {
   // Handlebars requires an object to be sent to the dog.handlebars file. Lucky for us, animals[0] is an object!
-
+  var dogs = {animals: []};
+  for (i=0; i<animals.length; i++){
+    if (animals[i].animalType === "dog"){
+      dogs.animals.push(animals[i]);
+    }
+  }
+  
+  res.render("dog", dogs)
   // 1. Send the dog object from the animals array to the dog.handlebars file.
 
 });
 
 app.get("/all-pets", function(req, res) {
   // Handlebars requires an object to be sent to the index.handlebars file.
-
+  var pets ={animals: []};
+  for (i=0; i<animals.length; i++){
+    if (animals[i].pet === true){
+      pets.animals.push(animals[i]);
+    }
+  }
+  res.render("index", pets)
   // 2. Send the animals to the index.handlebars file. Remember that animals is an array and not an object.
 
 });
 
 app.get("/all-non-pets", function(req, res) {
   // Handlebars requires an object to be sent to the index.handlebars file.
-
+  var nonPets ={animals: []};
+  for (i=0; i<animals.length; i++){
+    if (animals[i].pet === false){
+      nonPets.animals.push(animals[i]);
+    }
+  }
+  res.render("index", nonPets)
   // 3. Send all the animals that are not pets to the index.handlebars file.
 
 });

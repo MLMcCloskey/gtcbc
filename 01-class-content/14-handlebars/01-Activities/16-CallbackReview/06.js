@@ -16,3 +16,8 @@ var anythingGoes = function(functionOne, functionTwo, functionThree) {
 
 // Challenge: what does this return?
 anythingGoes(multiply, subtract, sum);
+
+
+// sum (12, 5) = 17
+
+// I was wrong. They didnt ever call "return" so the function is never executed. Undefined

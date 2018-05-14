@@ -16,3 +16,6 @@ var anythingGoes = function(functionOne, functionTwo, functionThree) {
 
 // Challenge: what does this return?
 anythingGoes(multiply, subtract, sum);
+
+
+// sum (12 , 5) = 17

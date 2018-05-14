@@ -12,3 +12,5 @@ var addCallBacks = function(functionOne, functionTwo) {
 
 // What does this return?
 addCallBacks(multiply, sum);
+
+// function one is multiply with parameters 6 and 2 which returns 12. function two is sum with parameters 6 and 3 which returns 9. The two are then added together to return 21

@@ -1,5 +1,11 @@
 var orm = require("./config/orm.js");
 
-var data = orm.selectWhere("parties", "party_type", "grown-up");
+orm.selectWhere("parties", "party_type", "grown-up", function(result){
+    var data = result;
+    console.log(data); // Data WAS undefined. Why?
+});
 
-console.log(data); // Data is undefined. Why?
+
+
+
+//problem solved by adding callback function to delay code

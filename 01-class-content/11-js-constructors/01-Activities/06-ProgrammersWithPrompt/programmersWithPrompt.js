@@ -30,11 +30,20 @@ inquirer.prompt([
   }, {
     name: "language",
     message: "What is your favorite programming language?"
+  }, {
+    type: "confirm",
+    message: "Are there more programmers to register?",
+    name: "confirm",
+    default: false
   }
 ]).then(function(answers) {
   // initializes the variable newProgrammer to be a programmer object which will take
   // in all of the user's answers to the questions above
-  var newProgrammer = new Programmer(answers.name, answers.position, answers.age, answers.language);
+  var newProgrammer = new Programmer(answers.name, answers.position, answers.age, answers.language, answers.confirm);
   // printInfo method is run to show that the newProgrammer object was successfully created and filled
   newProgrammer.printInfo();
+// })
+while (answers.confirm===true){
+  inquirer.prompt()
+}
 });
