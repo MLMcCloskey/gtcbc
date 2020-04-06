@@ -1,6 +1,6 @@
 // object shorthand syntax
 const name = "Nick";
-const age = 42;
+const age = 420;
 
 // key names and values are computed from variable
 const instructor = { name, age };

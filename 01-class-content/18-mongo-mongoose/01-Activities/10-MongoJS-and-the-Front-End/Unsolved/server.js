@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 // Database configuration
 // Save the URL of our database as well as the name of our collection
-var databaseUrl = "zoo";
+var databaseUrl = "zoodb";
 var collections = ["animals"];
 
 // Use mongojs to hook the database to the db variable
@@ -64,10 +64,10 @@ app.get("/name", function(req, res) {
 });
 
 // 4. At the "/weight" path, display every entry in the animals collection, sorted by weight
-app.get("/weight", function(req, res) {
+app.get("/legs", function(req, res) {
   // Query: In our database, go to the animals collection, then "find" everything,
   // but this time, sort it by weight (-1 means descending order)
-  db.animals.find().sort({ weight: -1 }, function(error, found) {
+  db.animals.find().sort({ numLegs: -1 }, function(error, found) {
     // Log any errors if the server encounters one
     if (error) {
       console.log(error);

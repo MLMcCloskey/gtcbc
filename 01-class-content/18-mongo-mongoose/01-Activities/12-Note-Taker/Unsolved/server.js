@@ -47,16 +47,45 @@ app.get("/", function(req, res) {
 // 1. Save a note to the database's collection
 // POST: /submit
 // ===========================================
+app.post("/submit", function(req,res){
+  db.collections.insert({req})
+})
+
+
+
 
 // 2. Retrieve all notes from the database's collection
 // GET: /all
 // ====================================================
+
+app.get("/all", function (req, res){
+  db.collections.find({}, function(error, found){
+    if (error){
+      console.log(error);
+    } else {
+      res.json(found);
+    }
+  });
+});
+
+
 
 // 3. Retrieve one note in the database's collection by it's ObjectId
 // TIP: when searching by an id, the id needs to be passed in
 // as (mongojs.ObjectId(IdYouWantToFind))
 // GET: /find/:id
 // ==================================================================
+app.get("/find/:id", function(req, res){
+  db.collections.find({_id: req.params.id}, function(err, found){
+    if (err){
+      console.log(err);
+    } else{
+      res.json(found);
+    }
+  });
+});
+
+
 
 // 4. Update one note in the database's collection by it's ObjectId
 // (remember, mongojs.ObjectId(IdYouWantToFind)

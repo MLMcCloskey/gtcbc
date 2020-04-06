@@ -17,7 +17,8 @@ var cat = {
     orm.update("cats", objColVals, condition, function(res) {
       cb(res);
     });
-  }
+  },
+  destroy: function()
 };
 
 // Export the database functions for the controller (catsController.js).

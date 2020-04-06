@@ -7,6 +7,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
+var db = require('./models/todo.js');
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -25,7 +26,6 @@ app.use(express.static("public"));
 // Routes
 // =============================================================
 require("./routes/api-routes.js")(app);
-
 // Starting our Express app
 // =============================================================
 app.listen(PORT, function() {

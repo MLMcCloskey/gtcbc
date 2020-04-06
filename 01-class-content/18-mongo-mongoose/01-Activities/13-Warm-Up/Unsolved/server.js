@@ -41,7 +41,14 @@ db.on("error", function(error) {
 app.post("/submit", function(req, res) {
   // Save the request body as an object called book
   var book = req.body;
-
+  db.create(req.body)
+    .then(function(dbBook){
+      res.json(dbBook);
+    })
+    .catch(function(err){
+      res.json(err);
+    })
+  
   // If we want the object to have a boolean value of false,
   // we have to do it here, because the ajax post will convert it
   // to a string instead of a boolean
@@ -49,10 +56,29 @@ app.post("/submit", function(req, res) {
 });
 
 // Find all books marked as read
-app.get("/read", function(req, res) {});
-
+app.get("/read", function(req, res) {
+  if (req.body.read == true){
+    db.find({}, function(error, found){
+      if (error){
+        console.log(error);
+      } else {
+        res.json(found);
+      }
+    })
+  }
+});
 // Find all books marked as unread
-app.get("/unread", function(req, res) {});
+app.get("/unread", function(req, res) {
+  if (req.body.read == false){
+    db.find({}, function(error, found){
+      if (error){
+        console.log(error);
+      } else {
+        res.json(found);
+      }
+    })
+  }
+});
 
 // Mark a book as having been read
 app.get("/markread/:id", function(req, res) {

@@ -20,9 +20,17 @@
 // by writing a function that takes in data (JSON) and creates a table body
 function displayResults(data) {
   // Add to the table here...
+  for (i = 0; i < data.length; i++) {
+    $("#results").append("<tr>");
+    $("#animal-name").append(`<td>${data[i].name}</td>`);
+    $("#animal-legs").append(`<td>${data[i].numLegs}</td>`);
+    $("#animal-class").append(`<td>${data[i].class}</td>`);
+    $("#animal-new-name").append(`<td>${data[i].whatIWouldReallyCallIt}</td>`);
+    $("#results").append("</tr>");
+  }
 }
 
-$.getJSON("/all", function(data) {
+$.getJSON("/all", function (data) {
   // Call our function to generate a table body
   displayResults(data);
 });

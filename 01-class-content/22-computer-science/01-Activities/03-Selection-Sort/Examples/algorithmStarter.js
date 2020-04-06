@@ -30,7 +30,11 @@ function swap(items, firstIndex, secondIndex) {
 }
 
 function selectionSort(items) {
-
+  for (let i = 0; i < items.length; i++) {
+    if ((items[i]) > (items[(i + 1)])) {
+      swap(items, items[i], items[(i + 1)])
+    }
+  }
   // FILL IN YOUR CODE HERE
   // Use the above swap function when you are ready to start swapping elements in the array.
 }

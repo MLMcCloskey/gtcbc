@@ -6,9 +6,9 @@ const princesses = [{ name: "Rapunzel", age: 18 }, { name: "Mulan", age: 16 },
 
 // log the name of each princess, follow by a colon, followed by their age
 // can be replaced with forEach
-for (let i = 0; i < princesses.length; i++) {
+princesses.forEach(function(princess)  {
   console.log(`${princesses[i].name}: ${princesses[i].age}`);
-}
+});
 
 
 // create an array of princess names from the existing array
@@ -33,10 +33,14 @@ console.log("m-names: ", mNames);
 
 // get a single value from the data: the average age of all of the princesses
 // Can be replaced with reduce
-let sum = 0;
-for (let i = 0; i < princesses.length; i++) {
-  sum += princesses[i].age;
-}
+
+// let sum = 0;
+// for (let i = 0; i < princesses.length; i++) {
+//   sum += princesses[i].age;
+// }
+const sum = princesses.reduce(function(sum, princess){
+  return sum + princess.age;
+})
 const average = sum / princesses.length;
 console.log("average age: ", average);
 

@@ -1,9 +1,9 @@
-log(name); // output: ?
+log(name); // output: ? undefined
 
 var tinyize = function(name) {
-  log(name); // output: ?
+  log(name); // output: ? Rick
 
-  log(myName); // output: ?
+  log(myName); // output: ? Tiny Rick
   var myName = "Tiny " + name + "!";
   log(myName); // output: ?
 

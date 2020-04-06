@@ -28,6 +28,17 @@ public class ConsoleIO {
 
   public static void main(String[] args) {
 
+    Scanner input = new Scanner(System.in);
+    
+    String_sentence = "", word = "";
+    
+    int _int = 0;
+    double dub = 0;
+    
+    System.out.print ("Write me a number");
+    if (input.hasNextInt())
+      _int = input.nextInt();
+
     // You need to instantiate something to read user input. Do that here.
 
     /* Print a message to the screen prompting the user for a student's first

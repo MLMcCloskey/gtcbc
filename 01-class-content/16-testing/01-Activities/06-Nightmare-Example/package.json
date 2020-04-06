@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nightmare": "^2.5.3"
+    "nightmare": "^2.10.0"
   }
 }

@@ -70,7 +70,10 @@ var UserSchema = new Schema({
 // Define the following custom instance methods here
 
 // 1. setFullName: sets the current user's `fullName` property to their lastName appended to their `firstName`
-
+UserSchema.methods.setFullName = function() {
+  this.fullName = this.firstName + this.lastName;
+  return this.fullName;
+}
 // 2. lastUpdatedDate: sets the current user's `lastUpdated` property to Date.now()
 
 // This creates our model from the above schema, using mongoose's model method

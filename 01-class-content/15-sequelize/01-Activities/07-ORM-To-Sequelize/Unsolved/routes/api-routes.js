@@ -7,7 +7,9 @@
 
 // grab the orm from the config
 // (remember: connection.js -> orm.js -> route file)
-var orm = require("../config/orm.js");
+// var orm = require("../config/orm.js");
+// const mysql = require('mysql2');
+// const 
 
 // Routes
 // =============================================================

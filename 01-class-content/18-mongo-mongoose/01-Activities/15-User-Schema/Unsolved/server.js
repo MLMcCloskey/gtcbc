@@ -41,6 +41,16 @@ app.post("/submit", function(req, res) {
     });
 });
 
+app.get("/all", function(req, res){
+  User.find({}, function(error, found){
+    if(error){
+      console.log(error);
+    } else {
+      res.json(found);
+    }
+  })
+})
+
 // Start the server
 app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");

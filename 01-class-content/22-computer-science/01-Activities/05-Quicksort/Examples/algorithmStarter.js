@@ -23,8 +23,15 @@ for (var index = 0; index < arraySize; index++) {
 // SOLUTION - Selection Sort
 // ================================================
 
+function compareNumbers(a, b) {
+  return a-b;
+}
+
+
 function quickSort(items) {
-  items.sort();
+  // items = parseInt(items);
+  items.sort(compareNumbers);
+  // console.log(items);
   return items;
 }
 

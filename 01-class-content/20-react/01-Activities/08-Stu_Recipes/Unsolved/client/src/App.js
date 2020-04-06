@@ -68,7 +68,17 @@ class App extends Component {
           </Row>
           <Row>
             <Col size="xs-12">
-              <h1>Render Recipes Here</h1>
+              {/* <h1>Render Recipes Here</h1> */}
+              <RecipeList>
+                {this.state.recipes.map( recipe=>
+                  <RecipeListItem key={recipe.href}
+                                  title={recipe.title}
+                                  href={recipe.href}
+                                  ingredients={recipe.ingredients}
+                                  thumbnail={recipe.thumbnail}
+                  />
+                )}
+              </RecipeList>  
             </Col>
           </Row>
         </Container>
